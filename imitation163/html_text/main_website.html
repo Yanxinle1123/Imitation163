@@ -39,17 +39,19 @@
             grid-template-columns: repeat(14, 1fr);
         }
 
-        .nav2 {
-            display: grid;
-            place-items: center;
-            height: 40px;
-            grid-template-columns: repeat(5, 1fr);
-        }
-
-
         .item {
             padding: 0; /* 设置内边距 */
             text-align: center; /* 文本居中 */
+        }
+
+        .container {
+            display: flex; /* 启用 Flexbox 布局 */
+            justify-content: space-between; /* 在主轴上分配空间 */
+        }
+
+        .left, .right {
+            display: inline; /* 设置为 inline */
+            padding: 10px; /* 内边距 */
         }
     </style>
     <link href="../images/title_logo.png" rel="icon" sizes="32x32" type="image/png">
@@ -64,7 +66,7 @@
                     网易首页
                 </a>
             </div>
-            <div class="item">
+            <div class="item leftline">
                 <a href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
                     应用
                 </a>
@@ -101,21 +103,19 @@
             </div>
         </div>
     </div>
-    <div style="height: 10px;"></div>
-    <div class="nav2">
-        <div>
+    <div style="height: 12px;"></div>
+    <div class="container">
+        <div class="left">
             <a href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
                 <img alt="图像未加载" height="45" src="../images/logo.png" width="300">
             </a>
         </div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div style="text-align: right">
-            <img alt="图像未加载" height="45" src="../images/advertisement.png">
+        <div class="right">
+            <a href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                <img alt="图像未加载" height="45" src="../images/advertisement.png">
+            </a>
         </div>
     </div>
-    <div style="height: 10px;"></div>
     <div>
         <hr id="Line"/>
     </div>
