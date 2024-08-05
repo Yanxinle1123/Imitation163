@@ -23,7 +23,7 @@
             color: rgb(255, 255, 255);
             gap: 5px; /* 设置列间距 */
             padding: 5px; /* 设置容器内边距 */
-            font-size: small;
+            font-size: 12px;
         }
 
         #Line {
@@ -36,7 +36,7 @@
             display: grid;
             place-items: center;
             height: 40px;
-            grid-template-columns: repeat(14, 1fr);
+            grid-template-columns: repeat(23, 1fr);
         }
 
         .item {
@@ -53,6 +53,22 @@
             display: inline; /* 设置为 inline */
             padding: 10px; /* 内边距 */
         }
+
+        .vertical-line {
+            height: 35px; /* 设置容器高度 */
+            position: relative; /* 设置为相对定位 */
+        }
+
+        .vertical-line::before {
+            content: ""; /* 伪元素内容为空 */
+            position: absolute; /* 绝对定位 */
+            top: 0; /* 顶部对齐 */
+            left: 50%; /* 水平居中 */
+            transform: translateX(-50%); /* 使竖线居中 */
+            width: 2px; /* 竖线的宽度 */
+            height: 100%; /* 竖线的高度与容器相同 */
+            background-color: #4D4D4D; /* 竖线颜色 */
+        }
     </style>
     <link href="../images/title_logo.png" rel="icon" sizes="32x32" type="image/png">
 </head>
@@ -66,38 +82,47 @@
                     网易首页
                 </a>
             </div>
-            <div class="item leftline">
+            <div class="item vertical-line"></div>
+            <div class="item">
                 <a href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
                     应用
                 </a>
             </div>
+            <div class="item vertical-line"></div>
             <div class="item">
                 <a href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
                     无障碍浏览
                 </a>
             </div>
+            <div class="item vertical-line"></div>
             <div class="item">
                 <a href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
                     进入关怀版
                 </a>
             </div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item vertical-line"></div>
             <div class="item">
                 <img alt="图像未加载" height="30" src="../images/mobile_terminal.png" width="30">
             </div>
+            <div class="item vertical-line"></div>
             <div class="item">公开课</div>
+            <div class="item vertical-line"></div>
             <div class="item">
-                <img alt="图像未加载" src="../images/strict_selection.png" width="40">
+                <img alt="图像未加载" src="../images/strict_selection.png" width="30">
             </div>
+            <div class="item vertical-line"></div>
             <div class="item">
                 <img alt="图像未加载" src="../images/money.png" width="20">
             </div>
+            <div class="item vertical-line"></div>
             <div class="item">
-                <img alt="图像未加载" src="../images/mailbox.png" width="30">
+                <img alt="图像未加载" src="../images/mailbox.png" width="25">
             </div>
+            <div class="item vertical-line"></div>
             <div class="item">电话号码</div>
+            <div class="item vertical-line"></div>
             <div class="item">安全退出</div>
+            <div class="item vertical-line"></div>
             <div class="item">
                 <img alt="图像未加载" src="../images/other.png" width="30">
             </div>
