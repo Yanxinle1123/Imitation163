@@ -33,36 +33,36 @@
         }
 
         .nav {
-            display: grid;
+            display: grid; /* 使用 Grid 布局 */
+            grid-template-columns: repeat(23, auto); /* 设置列数 */
+            grid-gap: 10px; /* 默认间隔 */
             place-items: center;
-            height: 40px;
-            grid-template-columns: repeat(23, 1fr);
         }
 
         .nav2 {
             display: grid;
-            place-items: center;
-            height: 40px;
-            grid-template-columns: repeat(11, 1fr);
+            grid-template-columns: repeat(11, auto);
+            grid-gap: 5px;
         }
 
         .nav3 {
             display: grid;
-            place-items: center;
             height: 40px;
-            grid-template-columns: repeat(7, 1fr);
+            place-items: center;
+            grid-template-columns: repeat(7, auto);
+            grid-gap: 5px;
         }
 
         .nav4 {
             display: grid;
             place-items: center;
             height: 40px;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(5, auto);
+            grid-gap: 5px;
         }
 
         .item {
-            padding: 0; /* 设置内边距 */
-            text-align: center; /* 文本居中 */
+            padding: 0;
         }
 
         .container {
@@ -92,7 +92,7 @@
         }
 
         .vertical-line2 {
-            height: 80px;
+            height: auto;
             position: relative;
         }
 
