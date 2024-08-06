@@ -70,6 +70,11 @@
             background-color: #4D4D4D; /* 竖线颜色 */
         }
     </style>
+    <script src="../javascript_text/change_image.js"></script>
+    <script src="../javascript_text/delay_execution.js"></script>
+    <script>
+
+    </script>
     <link href="../images/title_logo.png" rel="icon" sizes="32x32" type="image/png">
 </head>
 
@@ -156,7 +161,8 @@
         </div>
         <div class="right">
             <a href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
-                <img alt="图像未加载" height="45" src="../images/advertisement.png">
+                <img alt="图像未加载" height="45" id="advertisement-picture" onload="delayExecution(() => changeImage2('advertisement-picture', '../images/advertisement2.png', '../images/advertisement3.png', '../images/advertisement4.png', '../images/advertisement.png'), 5000)"
+                     src="../images/advertisement.png">
             </a>
         </div>
     </div>
