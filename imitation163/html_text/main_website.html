@@ -43,7 +43,7 @@
             display: grid;
             place-items: center;
             height: 40px;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(11, 1fr);
         }
 
         .nav3 {
@@ -89,6 +89,22 @@
             width: 2px; /* 竖线的宽度 */
             height: 100%; /* 竖线的高度与容器相同 */
             background-color: #4D4D4D; /* 竖线颜色 */
+        }
+
+        .vertical-line2 {
+            height: 80px;
+            position: relative;
+        }
+
+        .vertical-line2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: rgb(230, 230, 230);
         }
 
         .hover-color {
@@ -245,6 +261,7 @@
                 <div class="item">故事</div>
             </div>
         </div>
+        <div class="item vertical-line2"></div>
         <div class="item">
             <div class="nav3">
                 <div class="item bold">体育</div>
@@ -265,6 +282,7 @@
                 <div class="item">商业</div>
             </div>
         </div>
+        <div class="item vertical-line2"></div>
         <div class="item">
             <div class="nav3">
                 <div class="item bold">科技</div>
@@ -285,6 +303,7 @@
                 <div class="item">艺术</div>
             </div>
         </div>
+        <div class="item vertical-line2"></div>
         <div class="item">
             <div class="nav4">
                 <div class="item bold">直播</div>
@@ -302,6 +321,7 @@
 
             </div>
         </div>
+        <div class="item vertical-line2"></div>
         <div class="item">
             <div class="nav4">
                 <div class="item bold">汽车</div>
@@ -319,6 +339,7 @@
                 <div class="item">身体课</div>
             </div>
         </div>
+        <div class="item vertical-line2"></div>
         <div class="item">
             <div class="nav4">
                 <div class="item bold">深圳</div>
