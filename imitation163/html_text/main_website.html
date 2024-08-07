@@ -153,7 +153,7 @@
             min-width: 160px;
             z-index: 1;
             border: 2px solid gray; /* 设置下拉菜单的边框颜色为蓝色 */
-            margin-top: 40%; /* 设置下拉菜单与悬停链接之间的距离 */
+            margin-top: 10%; /* 设置下拉菜单与悬停链接之间的距离 */
             opacity: 0; /* 初始透明度为 0 */
             visibility: hidden; /* 初始不可见 */
             transition: opacity 0.5s ease, visibility 0.5s ease; /* 添加过渡效果 */
@@ -265,10 +265,22 @@
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
-                <a class="a-hover"
-                   href="#">
-                    <img alt="图像未加载" src="../images/strict_selection.png" width="30">
-                </a>
+                <div class="dropdown">
+                    <a class="a-hover"
+                       href="#">
+                        <img alt="图像未加载" src="../images/strict_selection.png" width="30">
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">新人特价</a>
+                        <a href="#"> 9.9专区</a>
+                        <a href="#">新品热卖</a>
+                        <a href="#">人气好物</a>
+                        <a href="#">居家生活</a>
+                        <a href="#">服饰鞋包</a>
+                        <a href="#">母婴亲子</a>
+                        <a href="#">美食酒水</a>
+                    </div>
+                </div>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
