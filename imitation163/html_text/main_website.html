@@ -9,15 +9,6 @@
             padding: 0;
         }
 
-        .a-hover {
-            text-decoration: none; /* 去掉下划线 */
-            color: white; /* 设置链接颜色 */
-        }
-
-        .a-hover:hover {
-            text-decoration: underline; /* 鼠标悬停时添加下划线 */
-        }
-
         #PageHead {
             background-color: rgb(51, 51, 51);
             color: rgb(255, 255, 255);
@@ -30,6 +21,15 @@
             height: 3px;
             background-color: red;
             border: none;
+        }
+
+        .a-hover {
+            text-decoration: none; /* 去掉下划线 */
+            color: white; /* 设置链接颜色 */
+        }
+
+        .a-hover:hover {
+            text-decoration: underline; /* 鼠标悬停时添加下划线 */
         }
 
         .nav {
@@ -140,6 +140,40 @@
         .bold {
             font-weight: bold;
         }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: block; /* 使下拉菜单在正常状态下可见 */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            border: 2px solid gray; /* 设置下拉菜单的边框颜色为蓝色 */
+            margin-top: 40%; /* 设置下拉菜单与悬停链接之间的距离 */
+            opacity: 0; /* 初始透明度为 0 */
+            visibility: hidden; /* 初始不可见 */
+            transition: opacity 0.5s ease, visibility 0.5s ease; /* 添加过渡效果 */
+        }
+
+        .dropdown:hover .dropdown-content {
+            opacity: 1; /* 鼠标悬停时设置透明度为 1 */
+            visibility: visible; /* 鼠标悬停时设置为可见 */
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
     </style>
     <script src="../javascript_text/change_image.js"></script>
     <script src="../javascript_text/delay_execution.js"></script>
@@ -154,65 +188,75 @@
     <!-- 菜单栏开始 -->
     <div id="PageHead">
         <div class="nav">
-            <div class="item hover-color">
+            <div class="item hover-color ">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     网易首页
                 </a>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
-                <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
-                    应用
-                </a>
+                <div class="dropdown">
+                    <a class="a-hover"
+                       href="#">
+                        应用
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">网易新闻</a>
+                        <a href="#">网易公开课</a>
+                        <a href="#">网易红彩</a>
+                        <a href="#">网易严选</a>
+                        <a href="#">邮箱大师</a>
+                        <a href="#">网易云课堂</a>
+                    </div>
+                </div>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     无障碍浏览
                 </a>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     进入关怀版
                 </a>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     <img alt="图像未加载" height="30" src="../images/mobile_terminal.png" width="30">
                 </a>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     公开课
                 </a>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     <img alt="图像未加载" src="../images/strict_selection.png" width="30">
                 </a>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     <img alt="图像未加载" src="../images/money.png" width="20">
                 </a>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     <img alt="图像未加载" src="../images/mailbox.png" width="25">
                 </a>
             </div>
@@ -220,14 +264,14 @@
             <div class="item hover-color2"
                  style="width: 100%; height: 150%; display: flex; justify-content: center; align-items: center; color: white;">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     登录
                 </a>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
                 <a class="a-hover"
-                   href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                   href="#">
                     注册免费邮箱
                 </a>
             </div>
@@ -244,7 +288,7 @@
         <!-- 顶部 logo 开始 -->
         <div class="left">
             <a class="a-hover"
-               href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+               href="#">
                 <img alt="图像未加载" height="45" src="../images/logo.png" width="300">
             </a>
         </div>
@@ -252,7 +296,7 @@
         <!-- 顶部广告开始 -->
         <div class="right">
             <a class="a-hover"
-               href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+               href="#">
                 <img alt="图像未加载" height="45" id="advertisement-picture"
                      onload="delayExecution(() => changeImage2('advertisement-picture', '../images/advertisement2.png', '../images/advertisement3.png', '../images/advertisement4.png', '../images/advertisement.png'), 10000)"
                      src="../images/advertisement.png">
@@ -268,28 +312,28 @@
             <div class="nav3">
                 <div class="item">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         新闻
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         军事
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         国内
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         航空
                     </a>
                 </div>
@@ -297,28 +341,28 @@
             <div class="nav3">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         娱乐
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         电影
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         音乐
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         故事
                     </a>
                 </div>
@@ -329,28 +373,28 @@
             <div class="nav3">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         体育
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         奥运
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         红彩
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         NBA
                     </a>
                 </div>
@@ -358,28 +402,28 @@
             <div class="nav3">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         财经
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         股票
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         基金
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         商业
                     </a>
                 </div>
@@ -390,28 +434,28 @@
             <div class="nav3">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         科技
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         手机
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         智能
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         文化
                     </a>
                 </div>
@@ -419,28 +463,28 @@
             <div class="nav3">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         时尚
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         教育
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         亲子
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         艺术
                     </a>
                 </div>
@@ -451,21 +495,21 @@
             <div class="nav4">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         直播
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         游戏
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         公开课
                     </a>
                 </div>
@@ -473,21 +517,21 @@
             <div class="nav4">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         房产
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         家居
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         租售房
                     </a>
                 </div>
@@ -499,21 +543,21 @@
             <div class="nav4">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         汽车
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         购车
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         选车
                     </a>
                 </div>
@@ -522,21 +566,21 @@
             <div class="nav4">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         健康
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         酒香
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         身体课
                     </a>
                 </div>
@@ -547,21 +591,21 @@
             <div class="nav4">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         深圳
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         政务
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         网易号
                     </a>
                 </div>
@@ -569,21 +613,21 @@
             <div class="nav4">
                 <div class="item bold hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         公益
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         旅游
                     </a>
                 </div>
                 <div class="item hover-color3"></div>
                 <div class="item hover-color3">
                     <a class="hover-color3"
-                       href="http://localhost:63342/Imitation163/imitation163/html_text/main_website.html?_ijt=2auhhebd2uflnamgm5m929sh73&_ij_reload=RELOAD_ON_SAVE">
+                       href="#">
                         严选
                     </a>
                 </div>
