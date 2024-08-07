@@ -174,6 +174,10 @@
         .dropdown-content a:hover {
             background-color: #f1f1f1;
         }
+
+        .border-img {
+            border: 2px solid black;
+        }
     </style>
     <script src="../javascript_text/change_image.js"></script>
     <script src="../javascript_text/delay_execution.js"></script>
@@ -227,17 +231,37 @@
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
-                <a class="a-hover"
-                   href="#">
-                    <img alt="图像未加载" height="30" src="../images/mobile_terminal.png" width="30">
-                </a>
+                <div class="dropdown">
+                    <a class="a-hover"
+                       href="#">
+                        <img alt="图像未加载" height="30" src="../images/mobile_terminal.png" width="30">
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">
+                            <img alt="图像未加载" class="border-img" height="130" src="../images/client_QR_code.png"
+                                 width="130">
+                        </a>
+                        <a href="#">下载网易新闻客户端</a>
+                    </div>
+                </div>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
-                <a class="a-hover"
-                   href="#">
-                    公开课
-                </a>
+                <div class="dropdown">
+                    <a class="a-hover"
+                       href="#">
+                        公开课
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">TED</a>
+                        <a href="#">中国大学视频公开课</a>
+                        <a href="#">国际名校公开课</a>
+                        <a href="#">赏课·纪录片</a>
+                        <a href="#">付费精品课程</a>
+                        <a href="#">北京大学公开课</a>
+                        <a href="#">英语课程学习</a>
+                    </div>
+                </div>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
