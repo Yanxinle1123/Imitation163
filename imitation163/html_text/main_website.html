@@ -156,12 +156,12 @@
         }
 
         .dropdown-content {
-            display: block; /* 使下拉菜单在正常状态下可见 */
+            display: block; /* 初始状态为可见 */
             position: absolute;
             background-color: #f9f9f9;
             min-width: 160px;
             z-index: 1;
-            border: 2px solid gray; /* 设置下拉菜单的边框颜色为蓝色 */
+            border: 2px solid gray; /* 设置下拉菜单的边框颜色为灰色 */
             margin-top: 10%; /* 设置下拉菜单与悬停链接之间的距离 */
             opacity: 0; /* 初始透明度为 0 */
             visibility: hidden; /* 初始不可见 */
@@ -190,9 +190,6 @@
     </style>
     <script src="../javascript_text/change_image.js"></script>
     <script src="../javascript_text/delay_execution.js"></script>
-    <script>
-
-    </script>
     <link href="../images/title_logo.png" rel="icon" sizes="32x32" type="image/png">
 </head>
 
@@ -201,7 +198,7 @@
     <!-- 菜单栏开始 -->
     <div id="PageHead">
         <div class="nav">
-            <div class="item hover-color ">
+            <div class="item hover-color">
                 <a class="a-hover"
                    href="#">
                     网易首页
@@ -360,10 +357,18 @@
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
-                <a class="a-hover"
-                   href="#">
-                    注册免费邮箱
-                </a>
+                <div class="dropdown">
+                    <a class="a-hover"
+                       href="#">
+                        注册免费邮箱
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">一卡通充值</a>
+                        <a href="#">一卡通购买</a>
+                        <a href="#">我的网易支付</a>
+                        <a href="#">网易跨境支付</a>
+                    </div>
+                </div>
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
