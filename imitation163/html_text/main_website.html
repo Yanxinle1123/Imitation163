@@ -77,6 +77,14 @@
             grid-gap: 0;
         }
 
+        .nav6 {
+            display: grid;
+            place-items: center;
+            height: 40px;
+            grid-template-columns: repeat(21, auto);
+            grid-gap: 5px;
+        }
+
         .item {
             padding: 0;
         }
@@ -121,6 +129,22 @@
             width: 2px;
             height: 100%;
             background-color: rgb(230, 230, 230);
+        }
+
+        .vertical-line3 {
+            height: 35px; /* 设置容器高度 */
+            position: relative; /* 设置为相对定位 */
+        }
+
+        .vertical-line3::before {
+            content: ""; /* 伪元素内容为空 */
+            position: absolute; /* 绝对定位 */
+            top: 0; /* 顶部对齐 */
+            left: 50%; /* 水平居中 */
+            transform: translateX(-50%); /* 使竖线居中 */
+            width: 2px; /* 竖线的宽度 */
+            height: 100%; /* 竖线的高度与容器相同 */
+            background-color: rgb(230, 230, 230); /* 竖线颜色 */
         }
 
         .hover-color {
@@ -175,12 +199,37 @@
             transition: opacity 0.5s ease, visibility 0.5s ease; /* 添加过渡效果 */
         }
 
+        .dropdown-content2 {
+            display: block; /* 初始状态为可见 */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            border: 2px solid gray; /* 设置下拉菜单的边框颜色为灰色 */
+            margin-top: 10%; /* 设置下拉菜单与悬停链接之间的距离 */
+            opacity: 0; /* 初始透明度为 0 */
+            visibility: hidden; /* 初始不可见 */
+            transition: opacity 0.5s ease, visibility 0.5s ease; /* 添加过渡效果 */
+        }
+
         .dropdown:hover .dropdown-content {
             opacity: 1; /* 鼠标悬停时设置透明度为 1 */
             visibility: visible; /* 鼠标悬停时设置为可见 */
         }
 
+        .dropdown:hover .dropdown-content2 {
+            opacity: 1; /* 鼠标悬停时设置透明度为 1 */
+            visibility: visible; /* 鼠标悬停时设置为可见 */
+        }
+
         .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content2 a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
@@ -196,9 +245,17 @@
             left: 0; /* 向右显示 */
         }
 
+        .dropdown-right .dropdown-content2 {
+            left: 0;
+        }
+
         /* 向左的下拉菜单 */
         .dropdown-left .dropdown-content {
             right: 0; /* 向左显示 */
+        }
+
+        .dropdown-left .dropdown-content2 {
+            right: 0;
         }
 
         .border-img {
@@ -355,7 +412,7 @@
                        href="#">
                         登录
                     </a>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content2">
                         <a href="#">
                             <div>
                                 <button style="width: 100%;">
@@ -431,11 +488,295 @@
             <div class="item hover-color">
                 <div class="dropdown dropdown-left">
                     <img alt="图像未加载" src="../images/other.png" width="30">
-                    <div class="dropdown-content" style="width: calc(100vw - 50px);">
-                        <a href="#">一卡通充值</a>
-                        <a href="#">一卡通购买</a>
-                        <a href="#">我的网易支付</a>
-                        <a href="#">网易跨境支付</a>
+                    <div class="dropdown-content2" style="width: calc(100vw - 50px); height: 400px;">
+                        <a href="#">
+                            <div class="nav6">
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        新闻
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>国内</div>
+                                        <br>
+                                        <div>国际</div>
+                                        <br>
+                                        <div>评论</div>
+                                        <br>
+                                        <div>军事</div>
+                                        <br>
+                                        <div>王三三</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        体育
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>NBA</div>
+                                        <br>
+                                        <div>CBA</div>
+                                        <br>
+                                        <div>综合</div>
+                                        <br>
+                                        <div>中超</div>
+                                        <br>
+                                        <div>国际足球</div>
+                                        <br>
+                                        <div>英超</div>
+                                        <br>
+                                        <div>西甲</div>
+                                        <br>
+                                        <div>意甲</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        娱乐
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>明星</div>
+                                        <br>
+                                        <div>图片</div>
+                                        <br>
+                                        <div>电影</div>
+                                        <br>
+                                        <div>电视</div>
+                                        <br>
+                                        <div>音乐</div>
+                                        <br>
+                                        <div>稿事编辑部</div>
+                                        <br>
+                                        <div>封面故事</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        财经
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>股票</div>
+                                        <br>
+                                        <div>行情</div>
+                                        <br>
+                                        <div>新股</div>
+                                        <br>
+                                        <div>金融</div>
+                                        <br>
+                                        <div>基金</div>
+                                        <br>
+                                        <div>商业</div>
+                                        <br>
+                                        <div>理财</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        汽车
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>购车</div>
+                                        <br>
+                                        <div>行情</div>
+                                        <br>
+                                        <div>车型库</div>
+                                        <br>
+                                        <div>新能源</div>
+                                        <br>
+                                        <div>行业</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        新闻
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>国内</div>
+                                        <br>
+                                        <div>国际</div>
+                                        <br>
+                                        <div>评论</div>
+                                        <br>
+                                        <div>军事</div>
+                                        <br>
+                                        <div>王三三</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        新闻
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>国内</div>
+                                        <br>
+                                        <div>国际</div>
+                                        <br>
+                                        <div>评论</div>
+                                        <br>
+                                        <div>军事</div>
+                                        <br>
+                                        <div>王三三</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        新闻
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>国内</div>
+                                        <br>
+                                        <div>国际</div>
+                                        <br>
+                                        <div>评论</div>
+                                        <br>
+                                        <div>军事</div>
+                                        <br>
+                                        <div>王三三</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        新闻
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>国内</div>
+                                        <br>
+                                        <div>国际</div>
+                                        <br>
+                                        <div>评论</div>
+                                        <br>
+                                        <div>军事</div>
+                                        <br>
+                                        <div>王三三</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        新闻
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>国内</div>
+                                        <br>
+                                        <div>国际</div>
+                                        <br>
+                                        <div>评论</div>
+                                        <br>
+                                        <div>军事</div>
+                                        <br>
+                                        <div>王三三</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                                <div class="item vertical-line3">
+                                </div>
+                                <div class="item">
+                                    <div style="font-size: large;">
+                                        新闻
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style="font-size: larger;">
+                                        <div>国内</div>
+                                        <br>
+                                        <div>国际</div>
+                                        <br>
+                                        <div>评论</div>
+                                        <br>
+                                        <div>军事</div>
+                                        <br>
+                                        <div>王三三</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                        <br>
+                                        <div style="color: #f9f9f9;">a</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
