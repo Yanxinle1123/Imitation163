@@ -9,6 +9,13 @@
             padding: 0;
         }
 
+        input[type="checkbox"] {
+            transform: scale(1.5); /* 放大 1.5 倍 */
+            margin-right: 8px; /* 添加右边距 */
+            cursor: pointer; /* 鼠标悬停时显示为可点击 */
+        }
+
+
         #PageHead {
             background-color: rgb(51, 51, 51);
             color: rgb(255, 255, 255);
@@ -197,6 +204,17 @@
         .border-img {
             border: 2px solid black;
         }
+
+        .left-right {
+            display: flex; /* 使用 Flexbox */
+            align-items: center; /* 垂直居中对齐 */
+        }
+
+        .center-vertically-label {
+            display: flex; /* 使用 Flexbox 使内容在一行中排列 */
+            align-items: center; /* 垂直居中对齐 */
+            cursor: pointer; /* 鼠标悬停时显示为可点击 */
+        }
     </style>
     <script src="../javascript_text/change_image.js"></script>
     <script src="../javascript_text/delay_execution.js"></script>
@@ -356,10 +374,41 @@
                                         <input placeholder="请输入手机号" style="width: 250px; height: 30px"
                                                type="text">
                                         <input style="opacity: 0; height: 2px; pointer-events: none;" type="text">
-                                        <input placeholder="请输入验证码" style="width: 250px; height: 30px"
-                                               type="text">
+                                        <span class="left-right">
+                                            <input placeholder="请输入验证码" style="width: 150px; height: 30px"
+                                                   type="text">
+                                            <input style="opacity: 0; width: 2px; pointer-events: none;" type="text">
+                                            <button style="width: 90px; height: 36px;">获取验证码</button>
+                                        </span>
                                     </label>
                                 </form>
+                                <br><br>
+                                <div>
+                                    <form>
+                                        <label class="center-vertically-label">
+                                            <input style="margin-right: 15px;" type="checkbox">
+                                            <span style="font-size: 14px;">我同意《服务条款》和《隐私政策》</span>
+                                        </label>
+                                    </form>
+                                </div>
+                                <br>
+                                <div>
+                                    <button style="width: 100%; height: 46px;">登录</button>
+                                </div>
+                                <br>
+                                <div class="left-right">
+                                    <div>
+                                        <form>
+                                            <label class="center-vertically-label">
+                                                <input style="margin-right: 15px;" type="checkbox">
+                                                <span style="font-size: 14px; margin-right: 72px;">十天内免登录</span>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div>
+                                        <span style="font-size: 14px;">遇到问题？</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -382,7 +431,15 @@
             </div>
             <div class="item vertical-line"></div>
             <div class="item hover-color">
-                <img alt="图像未加载" src="../images/other.png" width="30">
+                <div class="dropdown dropdown-left">
+                    <img alt="图像未加载" src="../images/other.png" width="30">
+                    <div class="dropdown-content" style="width: calc(100vw - 50px);">
+                        <a href="#">一卡通充值</a>
+                        <a href="#">一卡通购买</a>
+                        <a href="#">我的网易支付</a>
+                        <a href="#">网易跨境支付</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
