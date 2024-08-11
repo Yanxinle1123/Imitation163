@@ -266,3 +266,124 @@ input[type="checkbox"] {
     align-items: center; /* 垂直居中对齐 */
     cursor: pointer; /* 鼠标悬停时显示为可点击 */
 }
+
+
+.ntes_nav_wrap {
+    height: 45px;
+    box-sizing: content-box
+}
+
+
+@keyframes menu {
+    0%, 100%, 90% {
+        width: 24px
+    }
+
+    45% {
+        width: 6px
+    }
+}
+
+.ntes_nav_wrap .ntes-nav-quick-navigation a.ntes-nav-quick-navigation-btn {
+    display: block;
+    height: 43px
+}
+
+.ntes_nav_wrap .ntes-nav-quick-navigation a.ntes-nav-quick-navigation-btn:hover {
+    background: #1e1e1e
+}
+
+.ntes_nav_wrap .ntes-nav-quick-navigation a.ntes-nav-quick-navigation-btn:hover .menu1 {
+    -webkit-transform: translate(0, -2px);
+    -ms-transform: translate(0, -2px);
+    -o-transform: translate(0, -2px);
+    transform: translate(0, -2px)
+}
+
+.ntes_nav_wrap .ntes-nav-quick-navigation a.ntes-nav-quick-navigation-btn:hover .menu3 {
+    -webkit-transform: translate(0, 2px);
+    -ms-transform: translate(0, 2px);
+    -o-transform: translate(0, 2px);
+    transform: translate(0, 2px)
+}
+
+
+.ntes_nav_wrap .ntes-nav-quick-navigation .ntes-nav-quick-navigation-btn span {
+    display: block;
+    float: right;
+    clear: both;
+    width: 24px;
+    height: 2px;
+    background: #efefef
+}
+
+.ntes_nav_wrap .ntes-nav-quick-navigation em {
+    display: block;
+    text-indent: -999em;
+    overflow: hidden;
+    width: 28px;
+    height: 44px;
+    line-height: 0;
+    margin-left: 20px
+}
+
+.ntes_nav_wrap em {
+    font-style: normal;
+}
+
+.ntes-nav {
+    width: 100%;
+    line-height: 44px;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+}
+
+.ntes-nav {
+    text-align: left;
+}
+
+
+.ntes_nav_wrap .ntes-nav-quick-navigation span.menu1 {
+    margin: 13px 2px 0;
+    -webkit-transition: -webkit-transform .4s;
+    -o-transition: -o-transform .4s;
+    transition: transform .4s
+}
+
+.ntes_nav_wrap .ntes-nav-quick-navigation span.menu2 {
+    margin: 6px 2px 0
+}
+
+.ntes_nav_wrap .ntes-nav-quick-navigation span.menu3 {
+    margin: 6px 2px 0;
+    -webkit-transition: -webkit-transform .4s;
+    -o-transition: -o-transform .4s;
+    transition: transform .4s
+}
+
+
+.ntes_nav_wrap .ntes-nav-quick-navigation .ntes-nav-quick-navigation-init .menu1 {
+    -moz-animation: menu .8s ease 0s 2;
+    -webkit-animation: menu .8s ease 0s 2;
+    animation: menu .8s ease 0s 2
+}
+
+.ntes_nav_wrap .ntes-nav-quick-navigation .ntes-nav-quick-navigation-init .menu2 {
+    -moz-animation: menu .8s ease .16s 2;
+    -webkit-animation: menu .8s ease .16s 2;
+    animation: menu .8s ease .16s 2
+}
+
+.ntes_nav_wrap .ntes-nav-quick-navigation .ntes-nav-quick-navigation-init .menu3 {
+    -moz-animation: menu .8s ease .32s 2;
+    -webkit-animation: menu .8s ease .32s 2;
+    animation: menu .8s ease .32s 2
+}
+
+.ntes_nav_wrap em {
+    font-style: normal;
+}
+
+
