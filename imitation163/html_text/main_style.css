@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5); /* 放大 1.5 倍 */
+    margin-right: 8px; /* 添加右边距 */
+    cursor: pointer; /* 鼠标悬停时显示为可点击 */
+}
+
+
+#PageHead {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    gap: 5px; /* 设置列间距 */
+    padding: 5px; /* 设置容器内边距 */
+    font-size: 12px;
+}
+
+#Line {
+    height: 3px;
+    background-color: red;
+    border: none;
+}
+
+.a-hover {
+    text-decoration: none; /* 去掉下划线 */
+    color: white; /* 设置链接颜色 */
+}
+
+.a-hover:hover {
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
+.nav {
+    display: grid; /* 使用 Grid 布局 */
+    grid-template-columns: repeat(23, auto); /* 设置列数 */
+    grid-gap: 10px; /* 默认间隔 */
+    place-items: center;
+}
+
+.nav2 {
+    display: grid;
+    grid-template-columns: repeat(11, auto);
+    grid-gap: 5px;
+}
+
+.nav3 {
+    display: grid;
+    height: 40px;
+    place-items: center;
+    grid-template-columns: repeat(7, auto);
+    grid-gap: 5px;
+}
+
+.nav4 {
+    display: grid;
+    place-items: center;
+    height: 40px;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 5px;
+}
+
+.nav5 {
+    padding: 0;
+    display: grid;
+    height: 40px;
+    place-items: center;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 0;
+}
+
+.nav6 {
+    display: grid;
+    place-items: center;
+    height: 40px;
+    grid-template-columns: repeat(21, auto);
+    grid-gap: 5px;
+}
+
+.item {
+    padding: 0;
+}
+
+.container {
+    display: flex; /* 启用 Flexbox 布局 */
+    justify-content: space-between; /* 在主轴上分配空间 */
+}
+
+.left, .right {
+    display: inline; /* 设置为 inline */
+    padding: 10px; /* 内边距 */
+}
+
+.vertical-line {
+    height: 35px; /* 设置容器高度 */
+    position: relative; /* 设置为相对定位 */
+}
+
+.vertical-line::before {
+    content: ""; /* 伪元素内容为空 */
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 顶部对齐 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 使竖线居中 */
+    width: 2px; /* 竖线的宽度 */
+    height: 100%; /* 竖线的高度与容器相同 */
+    background-color: #4d4d4d; /* 竖线颜色 */
+}
+
+.vertical-line2 {
+    height: auto;
+    position: relative;
+}
+
+.vertical-line2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: rgb(230, 230, 230);
+}
+
+.vertical-line3 {
+    height: 380px; /* 设置容器高度 */
+    position: relative; /* 设置为相对定位 */
+}
+
+.vertical-line3::before {
+    content: ""; /* 伪元素内容为空 */
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 顶部对齐 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 使竖线居中 */
+    width: 2px; /* 竖线的宽度 */
+    height: 100%; /* 竖线的高度与容器相同 */
+    background-color: rgb(230, 230, 230); /* 竖线颜色 */
+}
+
+.hover-color {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(51, 51, 51);
+}
+
+.hover-color:hover {
+    background-color: rgb(30, 30, 30);
+}
+
+.hover-color2 {
+    background-color: rgb(180, 0, 0);
+}
+
+.hover-color2:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.hover-color3 {
+    text-decoration: none;
+    color: black;
+}
+
+.hover-color3:hover {
+    color: red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: block; /* 初始状态为可见 */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1; /* 确保下拉菜单在元素上方 */
+    border: 2px solid gray; /* 设置下拉菜单的边框颜色为灰色 */
+    margin-top: 10%; /* 设置下拉菜单与悬停链接之间的距离 */
+    opacity: 0; /* 初始透明度为 0 */
+    visibility: hidden; /* 初始不可见 */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* 添加过渡效果 */
+}
+
+.dropdown-content2 {
+    display: block; /* 初始状态为可见 */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    border: 2px solid gray; /* 设置下拉菜单的边框颜色为灰色 */
+    margin-top: 10%; /* 设置下拉菜单与悬停链接之间的距离 */
+    opacity: 0; /* 初始透明度为 0 */
+    visibility: hidden; /* 初始不可见 */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* 添加过渡效果 */
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1; /* 鼠标悬停时设置透明度为 1 */
+    visibility: visible; /* 鼠标悬停时设置为可见 */
+}
+
+.dropdown:hover .dropdown-content2 {
+    opacity: 1; /* 鼠标悬停时设置透明度为 1 */
+    visibility: visible; /* 鼠标悬停时设置为可见 */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* 向右的下拉菜单 */
+.dropdown-right .dropdown-content {
+    left: 0; /* 向右显示 */
+}
+
+.dropdown-right .dropdown-content2 {
+    left: 0;
+}
+
+/* 向左的下拉菜单 */
+.dropdown-left .dropdown-content {
+    right: 0; /* 向左显示 */
+}
+
+.dropdown-left .dropdown-content2 {
+    right: 0;
+}
+
+.border-img {
+    border: 2px solid black;
+}
+
+.left-right {
+    display: flex; /* 使用 Flexbox */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.center-vertically-label {
+    display: flex; /* 使用 Flexbox 使内容在一行中排列 */
+    align-items: center; /* 垂直居中对齐 */
+    cursor: pointer; /* 鼠标悬停时显示为可点击 */
+}
